@@ -1,0 +1,13 @@
+.digit-field {
+    float: left;
+    width: 2rem;
+}
+
+.field {
+    float: left;
+    width: 12rem;
+}
+
+.grid-container {
+    display: grid;
+}
