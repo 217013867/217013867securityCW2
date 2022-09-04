@@ -127,7 +127,7 @@ class UserController extends BaseController
                 if ($responseKeys["success"]) {
                     if ($responseKeys['score'] < 0.7)
                         $this->sendOutput(
-                            json_encode(array("message" => "Not a human on9")),
+                            json_encode(array("message" => "Not a human")),
                             array('Content-Type: application/json', 'HTTP/1.1 400 Bad Request')
                         );
                 }

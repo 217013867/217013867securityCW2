@@ -28,7 +28,7 @@ echo $config['recaptchaKey']
         </div>
         <br/>
         <div>
-            <input class="agree-box" type="checkbox" id="agree-box" checked="true"><label class="agree-label-text"
+            <input class="agree-box" type="checkbox" id="agree-box" ><label class="agree-label-text"
                                                                                           for="agree-box">I
                 have read and agree to the above Privacy Policy, Statement of Purpose, Copyright Notice and
                 Disclaimer.</label>
