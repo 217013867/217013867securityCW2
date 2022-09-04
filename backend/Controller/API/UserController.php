@@ -107,7 +107,9 @@ class UserController extends BaseController
             try {
 
                 // check recaptcha
-                $secretKey = "6Lf834whAAAAAA-Clz_FDmJVr5PfIUUVA1o__Uj4";
+                $configStr = file_get_contents("./config.json");
+                $config = json_decode($configStr, true);
+                $secretKey = $config['recaptchaKey'];
 
                 // post request to server
                 $url = 'https://www.google.com/recaptcha/api/siteverify';
