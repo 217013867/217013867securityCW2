@@ -53,7 +53,7 @@ class BaseController
                 header($httpHeader);
             }
         }
-        error_log(print_r($data, true));
+
 
         echo $data;
         exit;

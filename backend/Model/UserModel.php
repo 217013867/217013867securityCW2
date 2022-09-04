@@ -21,7 +21,7 @@ class UserModel extends Database
     public function insertHKID($hkidRef, $email, $phone, $selectedDate, $selectedTime, $location): bool
     {
         $q = "insert into booking (refHKID, email, phone, date, time, location) values (?, ?, ?, ?,?,?)";
-        error_log(print_r($q, true));
+
         return $this->insert($q, "ssssss", [$hkidRef, $email, $phone, $selectedDate, $selectedTime, $location]);
     }
 

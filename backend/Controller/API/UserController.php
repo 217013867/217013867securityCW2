@@ -77,9 +77,6 @@ class UserController extends BaseController
 
             } catch
             (Error $e) {
-                error_log(print_r("3333333333333333333333333333333333", true));
-                error_log(print_r($e, true));
-                error_log(print_r("444444444444444444444444444444444444444", true));
                 $strErrorDesc = $e->getMessage() . 'Something went wrong! Please contact support.';
                 $strErrorHeader = 'HTTP/1.1 500 Internal Server Error';
             }
@@ -126,8 +123,6 @@ class UserController extends BaseController
                 $response = file_get_contents($url, false, $context);
                 $responseKeys = json_decode($response, true);
 
-                error_log(print_r($responseKeys, true));
-                error_log(print_r($response, true));
 
                 if ($responseKeys["success"]) {
                     if ($responseKeys['score'] < 0.7)
@@ -146,7 +141,6 @@ class UserController extends BaseController
                         break;
                     }
                 }
-                error_log(print_r("aaaa" . $validateResult, true));
 
                 if (!$validateResult) {
                     $this->sendOutput(
